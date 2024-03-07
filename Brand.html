@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Brand</title>
+    <style>
+        /* CSS for Brand button */
+        .Brand {
+            margin-left: 1375px;
+            margin-top: 200px; /* Adjust this value as needed */
+            border: none;
+            outline: none;
+            background: #275360;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 600;
+            padding: 10px 18px;
+            border-radius: 5px;
+            box-shadow: 6px 6px 29px -4px rgba(0,0,0,0.75) ;
+            cursor: pointer;
+            transition: 0.15s ease;
+        }
+
+        /* CSS for table */
+        table {
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 60px; /* Adjust this value as needed */
+            border-collapse: collapse;
+            width: 80%;
+            border-radius: 5px;
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: #275360;
+            color: white;
+        }
+
+        tr {
+            background-color: #f2f2f2;
+        }
+
+        tbody tr:hover {
+            background-color: #ddd;
+        }
+
+    </style>
+</head>
+<body>
+<header>
+    <nav class="navbar">
+        <span class="hamburger-btn material-symbols-rounded">menu</span>
+        <a href="#" class="logo">
+            <img src="images/logo.jpg" alt="logo">
+            <h2>chemical industry storage management system</h2>
+        </a>
+        <ul class="links" style="margin-right: 70px;">
+            <span class="close-btn material-symbols-rounded">close</span>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="Brand.html">BRAND</a></li>
+            <li><a href="product.html">PRODUCT</a></li>
+            <li><a href="#">CONTACT US</a></li>
+        </ul>
+    </nav>
+</header>
+
+<button class="Brand" id="button">ADD BRAND</button>
+<div class="popup">
+    <div class="popup-content">
+        <label style="
+    margin-left: 0;
+    color: #251e1e;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.1s ease;
+">LIST OF BRAND</label>
+        <div class="inp">
+         <input type="text " placeholder="brand NAME"><br>
+         <input type="text" placeholder="ADDRESS"><br>
+        </div>
+       <div class="bur">
+        <a href="#" class="button">CLOSE</a>
+        <a href="#" class="button">SAVE</a>
+       </div>
+    </div>
+</div>
+
+<table>
+    <thead>
+        <tr>
+            <th>Brand Name</th>
+            <th>Status</th>
+            <th style="width:15%;">Options</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Brand 1</td>
+            <td>Active</td>
+            <td>Edit / Delete</td>
+        </tr>
+        <tr>
+            <td>Brand 2</td>
+            <td>Inactive</td>
+            <td>Edit / Delete</td>
+        </tr>
+        <!-- Add more rows as needed -->
+    </tbody>
+</table>
+
+<script>
+    document.getElementById("button").addEventListener("click", function() {
+        document.querySelector(".popup").style.display = 'flex';
+    });
+    document.querySelectorAll(".button").forEach(function(button) {
+    button.addEventListener("click", function(event) {
+        event.preventDefault(); // Prevent default behavior of the button
+        document.querySelector(".popup").style.display = 'none'; // Hide the popup
+    });
+});
+
+</script>
+
+
+</body>
+</html>
